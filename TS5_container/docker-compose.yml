@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  ts5:
+    build: .
+    image: ts5_twin
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
