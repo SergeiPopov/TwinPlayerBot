@@ -10,6 +10,10 @@ services:
       - POSTGRES_PASSWORD=${DB_PASS}
       - POSTGRES_DB=${DB_NAME}
     networks:
-      - app
+      - bot
     ports:
-      - 5432:5432
+      - ${DB_PORT}:${DB_PORT}
+
+networks:
+  bot:
+    driver: bridge
