@@ -2,6 +2,7 @@ import os
 import sys
 import asyncio
 import logging
+import enum
 
 import environ
 from aiogram import Bot, Dispatcher, html
